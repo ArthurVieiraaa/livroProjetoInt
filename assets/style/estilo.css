@@ -4,7 +4,7 @@
 
 :root{
 	/* global */
-	--color-primary:#00f7ff;
+	--color-primary:#00b7ff;
 	--color-0:#202020;
 	--color-secondary:#101010;
 	
@@ -13,7 +13,7 @@
 	--color-text:#d7d7d7;
 
 	/* geral */			
-	--color-stop1:#ff00dd;
+	--color-stop1:#4c00ff;
 	--direction:-160deg;
 }
 
