@@ -4,7 +4,7 @@
 
 :root{
 	/* global */
-	--color-primary:#00b7ff;
+	--color-primary:#008cff;
 	--color-0:#202020;
 	--color-secondary:#101010;
 	
@@ -13,7 +13,7 @@
 	--color-text:#d7d7d7;
 
 	/* geral */			
-	--color-stop1:#4c00ff;
+	--color-stop1:#d400ff;
 	--direction:-160deg;
 }
 
@@ -305,7 +305,7 @@ span{
 	height:100%;
 	color:#fff;text-align:center;
 	cursor:default;
-	padding:30px;
+	padding:10px;
 	background:linear-gradient(var(--direction),var(--color-stop1),var(--color-primary));
 }
 
