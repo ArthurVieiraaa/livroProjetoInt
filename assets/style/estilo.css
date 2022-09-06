@@ -4,9 +4,9 @@
 
 :root{
 	/* global */
-	--color-primary:#008cff;
-	--color-0:#202020;
-	--color-secondary:#101010;
+	--color-primary:#00c3ff;
+	--color-0:#201b2c;
+	--color-secondary:#2f2841;
 	
 	/* text's */
 	--color-span:#adacac;
@@ -63,7 +63,7 @@ body{
 .left-login > h1 {
 	font-size: 32px;
 	padding-top: 450px;
-	color: #00c3ff;
+	color: #ffffff;
 }
 
 .right-login{
