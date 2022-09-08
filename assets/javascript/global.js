@@ -17,7 +17,7 @@ const books = [
         text: 'Endurance',
         img: 'https://images-na.ssl-images-amazon.com/images/I/51Entnc8cUL._SX441_BO1,204,203,200_.jpg',
         button: 'Comprar',
-        link: '../../pagLivros/endurance.html',
+        link: 'endurance.html',
         type: 'line-01'
     },
 
