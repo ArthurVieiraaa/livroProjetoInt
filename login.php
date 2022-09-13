@@ -1,5 +1,52 @@
+<?php
+    include "../include/MySql.php";
+    include "../include/functions.php";
+
+    session_start();
+    $_SESSION['nome'] = "";
+    $_SESSION['adminitrador'] = ""; 
+
+    $email = $senha = "";
+    $emailErr = $senhaErr = "";
+
+
+    if ($_SERVER['REQUEST_METHOD'] == "POST"){
+        if (empty($_POST['email'])){
+            $emailErr = "Email é obrigatório!";
+        } else {
+            $email = test_input($_POST["email"]);
+        }
+
+        if (empty($_POST['senha'])){
+            $senhaErr = "Senha é obrigatória!";
+        } else {
+            $senha = test_input($_POST['senha']);
+        }
+
+        // Codigo para consultar os dados no Banco de Dados
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $sql = $pdo->prepare("SELECT * FROM usuario 
+                              WHERE email = ? AND senha = ?");
+        if($sql->execute(array($email,md5($senha)))){
+            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+            if (count($info) > 0) {
+                foreach($info as $key => $values){
+                    $_SESSION['nome'] = $values['nome'];
+                    $_SESSION['administrador'] = $values['administrador'];
+
+                }
+                header('location:principal.php');
+            } else {
+                echo '<h6>Email de usuario não cadastrado</h6>';
+            }
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,14 +79,14 @@
     </nav>
     <div class="main-login">
         <div class="left-login">
-            <h1 >Bem Vindo a nossa <span style="color: #00c3ff;">Biblioteca Virtual</span><br><br>Faça uma <a href="index.html" span style="color: #00c3ff;">Visita</a></span> ou faça o registro</h1>
+            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="index.html"  class="btn-visita">Visita</a> ou faça o registro</h1>
         </div>
         <div class="right-login">
             <div class="card-login">
                 <h1>LOGIN</h1>
                 <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" placeholder="Email">
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
