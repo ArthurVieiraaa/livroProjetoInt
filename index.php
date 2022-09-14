@@ -61,7 +61,7 @@
     <nav class="rf3siq6p3t">
         <div class="rf3siq6p3t-container">
             <div class="rf3siq6p3t-logo">
-                <a href="login.html">
+                <a href="index.php">
                     <h3>Book's <i class="fa-solid fa-book-bookmark"></i></h3>
                 </a>
             </div>
@@ -72,14 +72,14 @@
             </div>
             <ul class="rf3siq6p3t-menu">
                 <li class="rf3siq6p3t-item">
-                    <a href="registro.html" class="rf3siq6p3t-links active"><i class="fa-solid fa-user-plus"></i>Registre-se</a>
+                    <a href="registro.php" class="rf3siq6p3t-links active"><i class="fa-solid fa-user-plus"></i>Registre-se</a>
                 </li>	
             </ul>
         </div>
     </nav>
     <div class="main-login">
         <div class="left-login">
-            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="index.html"  class="btn-visita">Visita</a> ou faça o registro</h1>
+            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="biblioteca.html"  class="btn-visita">Visita</a> ou faça o registro</h1>
         </div>
         <div class="right-login">
             <div class="card-login">

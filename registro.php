@@ -89,7 +89,7 @@
     <nav class="rf3siq6p3t">
         <div class="rf3siq6p3t-container">
             <div class="rf3siq6p3t-logo">
-                <a href="login.html">
+                <a href="index.php">
                     <h3>Book's <i class="fa-solid fa-book-bookmark"></i></h3>
                 </a>
             </div>
@@ -100,7 +100,7 @@
             </div>
             <ul class="rf3siq6p3t-menu">
                 <li class="rf3siq6p3t-item">
-                    <a href="login.html" class="rf3siq6p3t-links active"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a>
+                    <a href="index.php" class="rf3siq6p3t-links active"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a>
                 </li>	
             </ul>
         </div>
