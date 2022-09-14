@@ -1,12 +1,12 @@
 <?php
     define('HOST', 'localhost');
-    define('DB', 'Nome banco');
+    define('DB', 'biblioteca');
     define('USER', 'root');
     define('PASS', '');
 
     try{
         //conexao
-        $pdo = new PDO('mysql:host='.HOST.';port=3307;dbname='.DB,
+        $pdo = new PDO('mysql:host='.HOST.';port=3306;dbname='.DB,
                        USER,
                        PASS,
                        array(PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8'));

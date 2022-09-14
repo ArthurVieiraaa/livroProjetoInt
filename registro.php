@@ -54,12 +54,12 @@
         }
 
         //Inserir no banco de dados
-          $sql = $pdo->prepare('SELECT * FROM usuario WHERE email = ?');
+          $sql = $pdo->prepare('SELECT * FROM registro WHERE email = ?');
           if($sql->execute(array($email))){
             if($sql->rowCount() > 0){
                 echo 'Email ja cadastrado';
             }else {
-                $sql = $pdo->prepare("INSERT INTO USUARIO (codigo, usuario, email, nome, cpf, telefone, senha, senhaconf, adm)
+                $sql = $pdo->prepare("INSERT INTO REGISTRO (codigo, usuario, email, nome, cpf, telefone, senha, senhaconf, adm)
                                     VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?,)");
                 if ($sql->execute(array($usuario, $email, $nome, $cpf, $telefone, $senha, $senhaconf, $adm))){
                 $msgErr = "Dados cadastrados com sucesso!";
