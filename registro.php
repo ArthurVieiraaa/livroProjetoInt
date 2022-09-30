@@ -1,5 +1,5 @@
 <?php
-    include "../include/MySql.php";
+    include "include/MySql.php";
 
     $usuario = $email = $nome = $cpf = $telefone = $senha = $senhaconf = $adm = "";
     $usuarioErr = $emailErr = $nomeErr = $cpfErr = $senhaErr = $senhaconfErr = $admErr = $msgErr = "";
@@ -59,9 +59,9 @@
             if($sql->rowCount() > 0){
                 echo 'Email ja cadastrado';
             }else {
-                $sql = $pdo->prepare("INSERT INTO REGISTRO (codigo, usuario, email, nome, cpf, telefone, senha, senhaconf, adm)
+                $sql = $pdo->prepare("INSERT INTO REGISTRO (cpf, nome, telefone, email, senha, senhaconf, adm)
                                     VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?,)");
-                if ($sql->execute(array($usuario, $email, $nome, $cpf, $telefone, $senha, $senhaconf, $adm))){
+                if ($sql->execute(array($cpf, $nome, $telefone, $email, $senha, $senhaconf, $adm))){
                 $msgErr = "Dados cadastrados com sucesso!";
                 header("location: login.php");  
                 } else {

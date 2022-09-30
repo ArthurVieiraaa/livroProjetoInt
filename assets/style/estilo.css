@@ -370,6 +370,18 @@ main{
 	box-shadow: 0px 10px 40px #00000056;
 }
 
+.card-cad{
+	width: 45%;
+	display: flex;
+	justify-items: center;
+	align-items: left;
+	flex-direction: column;
+	padding: 30px 35px;
+	background: #2f2841;
+	border-radius: 20px;
+	box-shadow: 0px 10px 40px #00000056;
+}
+
 .card-login > h1 {
 	color: #00c3ff;
 	font-weight: 800;
@@ -455,7 +467,7 @@ main{
 	color: #2b134b;
 	background: rgb(0, 238, 255);
 	cursor: pointer;
-	box-shadow: 0px 10px 40px -12px #00ff8052;
+	box-shadow: 0px 10px 40px -12px rgb(0, 238, 255);
 }
 
 .btn-registro{
@@ -471,7 +483,23 @@ main{
 	color: #2b134b;
 	background: rgb(0, 238, 255);
 	cursor: pointer;
-	box-shadow: 0px 10px 40px -12px #00ff8052;
+	box-shadow: 0px 10px 40px -12px rgb(0, 238, 255);
+}
+
+.btn-cad{
+	width: 30%;
+	padding: 16px 0px;
+	margin: 25px;
+	border: none;
+	border-radius: 8px;
+	outline: 0px;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 3px;
+	color: #2b134b;
+	background: rgb(0, 238, 255);
+	cursor: pointer;
+	box-shadow: 0px 10px 40px -12px rgb(0, 238, 255);
 }
 
 .btn-visita{
@@ -533,7 +561,8 @@ span{
 }
 
 .rf3siq6p3t-container{
-	display:flex;height:100%;
+	display:flex;
+	height:100%;
 	align-items:center;
 	justify-content:space-between;
 	z-index:1;

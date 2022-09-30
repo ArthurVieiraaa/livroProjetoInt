@@ -129,3 +129,18 @@ function insertBooks(element, img, button, link, type){
         );
     };
 };
+
+//senha para admin
+document.getElementById('administrador').onclick = function(){
+    const administrador = prompt('Insira a senha')
+
+    if (administrador === null){
+        document.getElementById('administrador').setAttribute('disabled', 'disabled');
+    };
+
+    if (administrador.toLowerCase() == 'bv@2022') {
+        document.getElementById('administrador').removeAttribute('disabled');
+    } else {
+        document.getElementById('administrador').setAttribute('disabled', 'disabled');        
+    };
+};
