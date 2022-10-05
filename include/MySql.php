@@ -1,6 +1,6 @@
 <?php
     define('HOST', 'localhost');
-    define('DB', 'biblioteca');
+    define('DB', 'livraria');
     define('USER', 'root');
     define('PASS', '');
 
