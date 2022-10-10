@@ -159,6 +159,10 @@ body{
 	box-sizing: border-box;
 }
 
+.sobree {
+	font-size: 12pt;
+} 
+        
 .textofield > input {
 	width: 100%;
 	border: none;
