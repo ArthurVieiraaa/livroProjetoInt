@@ -1,8 +1,8 @@
 <?php
     include "include/MySql.php";
 
-    $usuario = $email = $nome = $cpf = $telefone = $senha = $senhaconf = $adm = "";
-    $usuarioErr = $emailErr = $nomeErr = $cpfErr = $senhaErr = $senhaconfErr = $admErr = $msgErr = "";
+    $email = $nome = $cpf = $telefone = $senha = $senhaconf = $adm = "";
+    $emailErr = $nomeErr = $cpfErr = $telefoneErr = $senhaErr = $senhaconfErr = $admErr = $msgErr = "";
 
     function test_input($data){
         $data = trim($data);
@@ -12,11 +12,6 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['cadastro'])){
-        if (empty($_POST['usuario'])){
-            $usuarioErr = "Usuário é obrigatório!";
-        } else {
-            $usuario = test_input($_POST["usuario"]);
-        }
         if (empty($_POST['email'])){
             $emailErr = "Email é obrigatório!";
         } else {
@@ -47,6 +42,9 @@
         } else {
             $senhaconf = test_input($_POST["senhaconf"]);
         }
+        if($senhaconf !== $senha){
+            echo 'Senha não coincide.';
+        };
         if (empty($_POST['adm'])){
             $adm = false;
         } else {
@@ -54,18 +52,16 @@
         }
 
         //Inserir no banco de dados
-          $sql = $pdo->prepare('SELECT * FROM registro WHERE email = ?');
+          $sql = $pdo->prepare('SELECT * FROM usuario WHERE email = ?');
           if($sql->execute(array($email))){
             if($sql->rowCount() > 0){
                 echo 'Email ja cadastrado';
             }else {
-                $sql = $pdo->prepare("INSERT INTO REGISTRO (cpf, nome, telefone, email, senha, senhaconf, adm)
-                                    VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?,)");
-                if ($sql->execute(array($cpf, $nome, $telefone, $email, $senha, $senhaconf, $adm))){
-                $msgErr = "Dados cadastrados com sucesso!";
-                header("location: login.php");  
+                $sql = $pdo->prepare("INSERT INTO usuario (cpf, nome, telefone, email, senha, adm) VALUES (?, ?, ?, ?, ?, ?)");
+                if ($sql->execute(array($cpf, $nome, $telefone, $email, $senha, $adm))){
+                    $msgErr = "Dados cadastrados com sucesso!";
                 } else {
-                $msgErr = "Dados não cadastrados!";
+                    $msgErr = "Dados não cadastrados!";
                 };
             };
           };                    
@@ -80,6 +76,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/estilo.css">
+    <link rel="stylesheet" href="assets/javascript/global.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<link rel="shortcut icon" href="imgs/logoicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -105,43 +102,52 @@
             </ul>
         </div>
     </nav>
-    <div class="main-registro">
+    <form action="" method="POST">
+        <div class="main-registro">
         <div class="card-registro">
             <h1>REGISTRO</h1>
+            <br>
             <div class="textofield">
-                <label for="usuario">Usuário</label>
-                <input type="text" name="usuario" placeholder="Usuário">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" placeholder="Nome" value="<?php echo $nome?>">
+                <span class="obrigatorio">*<?php echo $nomeErr ?></span>
             </div>
             <div class="textofield">
                 <label for="email">Email</label>
-                <input type="text" name="email" placeholder="Email">
-            </div>
-            <div class="textofield">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" placeholder="Nome">
+                <input type="text" name="email" placeholder="Email" value="<?php echo $email?>">
+                <span class="obrigatorio">*<?php echo $emailErr ?></span>
             </div>
             <div class="textofield">
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" placeholder="CPF">
+                <input type="text" name="cpf" placeholder="CPF" value="<?php echo $cpf?>">
+                <span class="obrigatorio">*<?php echo $cpfErr ?></span>
             </div>
             <div class="textofield">
                 <label for="telefone">Telefone</label>
-                <input type="text" name="telefone" placeholder="Telefone">
+                <input type="text" name="telefone" placeholder="Telefone" value="<?php echo $telefone?>">
+                <span class="obrigatorio">*<?php echo $telefoneErr ?></span>
             </div>
             <div class="textofield">
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" placeholder="Senha">
+                <input type="password" name="senha" placeholder="Senha" value="<?php echo $senha?>">
+                <span class="obrigatorio">*<?php echo $senhaErr ?></span>
             </div>
             <div class="textofield">
                 <label for="senhaconf">Confirmar sua Senha</label>
-                <input type="password" name="senhaconf" placeholder="Confirme sua Senha">
+                <input type="password" name="senhaconf" placeholder="Confirme sua Senha" value="<?php echo $senhaconf?>">
+                <span class="obrigatorio">*<?php echo $senhaconfErr ?></span>
             </div>
             <div class="textofield">
                 <label for="adm">Administrador</label>
-                <input type="checkbox" name="adm" placeholder="">
+                <input type="checkbox" name="adm" placeholder="" value="<?php echo $adm?>">
             </div>
-            <button class="btn-registro">Efetuar Registro</button>
+            <div>
+            <input class="btn-registro" type="submit" value="Cadastrar" name="cadastro">
+            <span class="obrigatorio"><?php echo $msgErr ?></span>
+        </div>
         </div>
     </div>
+    </form>
+    
 </body>
 </html>

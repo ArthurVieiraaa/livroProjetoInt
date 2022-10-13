@@ -4,10 +4,12 @@
 
 
     $msgErr = "";
-    $descricao = "";
-    $descrErr = "";
-    $nome = "";
-    $nomeErr = "";
+    $titulo = "";
+    $tituloErr = "";
+    $ano = "";
+    $anoErr = "";
+    $autor = "";
+    $autorErr = "";
     $valor = 0;
     $valorErr = "";
     $imagem = "";
@@ -27,16 +29,22 @@
                 $image = $_FILES['image']['tmp_name'];
                 $imgContent = file_get_contents($image);
 
-                if (isset($_POST['nome'])){
-                    $nome = $_POST['nome'];
+                if (isset($_POST['titulo'])){
+                    $titulo = $_POST['titulo'];
                 } else {
-                    $nome = "";
+                    $titulo = "";
                 };
 
-                if (isset($_POST['descricao'])){
-                    $descricao = $_POST['descricao'];
+                if (isset($_POST['ano'])){
+                    $ano = $_POST['ano'];
                 } else {
-                    $descricao = "";
+                    $ano = "";
+                };
+
+                if (isset($_POST['autor'])){
+                    $autor = $_POST['autor'];
+                } else {
+                    $autor = "";
                 };
 
                 if (isset($_POST['valor'])){
@@ -48,8 +56,8 @@
                 
 
                 //GRAVAR NO BANCO
-                $sql = $pdo->prepare("INSERT INTO PRODUTOS (codigo, nome, descricao, valor, imagem) VALUES (null, ?,?,?,?)");
-                if ($sql->execute(array($nome, $descricao, $valor, $imgContent))){
+                $sql = $pdo->prepare("INSERT INTO livros (cod_livro, titulo, ano, autor, valor, imagem) VALUES (null, ?,?,?,?,?)");
+                if ($sql->execute(array($titulo, $ano, $autor, $valor, $imgContent))){
                     $msgErr = "Dados Cadastrados com suscessso";
                 } else {
                     $msgErr = "Dados não cadastrados!";
@@ -106,13 +114,18 @@
 <br><br>
     <fieldset class="card-cad">
         <div class="textfield">
-            <input class="input-login" type="text" name="nome" placeholder="Nome" value="<?php echo $nome?>">
-            <span class="obrigatorio">* <?php echo $nomeErr ?></span>
+            <input class="input-login" type="text" name="titulo" placeholder="Nome" value="<?php echo $titulo?>">
+            <span class="obrigatorio">* <?php echo $tituloErr ?></span>
         </div>
 
         <div class="textfield">
-            <input class="input-login" type="email" name="email" placeholder="Descrição" value="<?php echo $descricao?>">
-            <span class="obrigatorio">* <?php echo $descrErr ?></span>
+            <input class="input-login" type="email" name="email" placeholder="Descrição" value="<?php echo $ano?>">
+            <span class="obrigatorio">* <?php echo $anoErr ?></span>
+        </div>
+
+        <div class="textfield">
+            <input class="input-login" type="text" name="valor" placeholder="Valor" value="<?php echo $autor?>">
+            <span class="obrigatorio">* <?php echo $autorErr ?></span>
         </div>
         
         <div class="textfield">

@@ -107,6 +107,7 @@ body{
 }
 
 .card-cad{
+	margin-left: 500px;
 	width: 45%;
 	display: flex;
 	justify-items: center;
@@ -251,6 +252,10 @@ body{
 
 span{
 	color:var(--color-primary);
+}
+
+form > h1{
+	margin-left: 500px;
 }
 
 .c9932401{
