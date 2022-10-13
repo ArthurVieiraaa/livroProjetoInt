@@ -6,15 +6,15 @@
     $_SESSION['nome'] = "";
     $_SESSION['adminitrador'] = ""; 
 
-    $email = $senha = "";
-    $emailErr = $senhaErr = "";
+    $usuario = $senha = "";
+    $usuarioErr = $senhaErr = "";
 
 
     if ($_SERVER['REQUEST_METHOD'] == "POST"){
-        if (empty($_POST['email'])){
-            $emailErr = "Email é obrigatório!";
+        if (empty($_POST['usuario'])){
+            $usuarioErr = "Usuário é obrigatório!";
         } else {
-            $email = test_input($_POST["email"]);
+            $usuario = test_input($_POST["usuario"]);
         }
 
         if (empty($_POST['senha'])){
@@ -24,11 +24,11 @@
         }
 
         // Codigo para consultar os dados no Banco de Dados
-        $email = $_POST['email'];
+        $usuario = $_POST['usuario'];
         $senha = $_POST['senha'];
         $sql = $pdo->prepare("SELECT * FROM usuario 
-                              WHERE email = ? AND senha = ?");
-        if($sql->execute(array($email,md5($senha)))){
+                              WHERE usuario = ? AND senha = ?");
+        if($sql->execute(array($usuario,md5($senha)))){
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
             if (count($info) > 0) {
                 foreach($info as $key => $values){
@@ -85,8 +85,8 @@
             <div class="card-login">
                 <h1>LOGIN</h1>
                 <div class="textfield">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" placeholder="Email">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="Usuário">
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>

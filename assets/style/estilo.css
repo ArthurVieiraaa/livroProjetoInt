@@ -160,6 +160,10 @@ body{
 	box-sizing: border-box;
 }
 
+.sobree {
+	font-size: 12pt;
+} 
+        
 .textofield > input {
 	width: 100%;
 	border: none;
@@ -430,7 +434,7 @@ form > h1{
 .h1lify9bj9 .c9932401 h1{
 	font-size:2.25rem;
 	line-height:1.333;
-	color:var(--color-text);
+	color: #00c3ff;
 	font-weight:700;
 	text-align:center;
 }
