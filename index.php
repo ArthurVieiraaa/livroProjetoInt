@@ -3,18 +3,18 @@
     include "include/functions.php";
 
     session_start();
-    $_SESSION['nome'] = "";
+    $_SESSION['email'] = "";
     $_SESSION['adminitrador'] = ""; 
 
-    $usuario = $senha = "";
-    $usuarioErr = $senhaErr = "";
+    $email = $senha = "";
+    $emailErr = $senhaErr = "";
 
 
     if ($_SERVER['REQUEST_METHOD'] == "POST"){
-        if (empty($_POST['usuario'])){
-            $usuarioErr = "Usuário é obrigatório!";
+        if (empty($_POST['email'])){
+            $emailErr = "Email é obrigatório!";
         } else {
-            $usuario = test_input($_POST["usuario"]);
+            $email = test_input($_POST["email"]);
         }
 
         if (empty($_POST['senha'])){
@@ -24,11 +24,11 @@
         }
 
         // Codigo para consultar os dados no Banco de Dados
-        $usuario = $_POST['usuario'];
+        $email = $_POST['email'];
         $senha = $_POST['senha'];
-        $sql = $pdo->prepare("SELECT * FROM usuario 
-                              WHERE usuario = ? AND senha = ?");
-        if($sql->execute(array($usuario,md5($senha)))){
+        $sql = $pdo->prepare("SELECT * FROM usuario  
+                              WHERE email = ? AND senha = ?");
+        if($sql->execute(array($email,md5($senha)))){
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
             if (count($info) > 0) {
                 foreach($info as $key => $values){
@@ -36,7 +36,7 @@
                     $_SESSION['administrador'] = $values['administrador'];
 
                 }
-                header('location:principal.php');
+                header('location:biblioteca.html');
             } else {
                 echo '<h6>Email de usuario não cadastrado</h6>';
             }
@@ -84,16 +84,20 @@
         <div class="right-login">
             <div class="card-login">
                 <h1>LOGIN</h1>
+                <form action="./biblioteca.html" method="GET">
                 <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <label for="usuario">Email</label>
+                    <input type="text" name="email" placeholder="Usuário" value=<?php echo $email ?>>
+                    <span class="obrigatorio">* <?php echo $emailErr ?></span>
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="text" name="senha" placeholder="Senha">
+                    <input type="text" name="senha" placeholder="Senha" value=<?php echo $senha ?>>
+                    <span class="obrigatorio">* <?php echo $senhaErr ?></span>
                 </div>
                 <button class="btn-login">Login</button>
             </div>
+                </form>
         </div>
     </div>
 </body>

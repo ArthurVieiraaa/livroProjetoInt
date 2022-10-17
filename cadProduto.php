@@ -119,7 +119,7 @@
         </div>
 
         <div class="textfield">
-            <input class="input-login" type="email" name="email" placeholder="Descrição" value="<?php echo $ano?>">
+            <input class="input-login" type="text" name="email" placeholder="Descrição" value="<?php echo $ano?>">
             <span class="obrigatorio">* <?php echo $anoErr ?></span>
         </div>
 

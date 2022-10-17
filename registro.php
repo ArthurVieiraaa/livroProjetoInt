@@ -60,6 +60,7 @@
                 $sql = $pdo->prepare("INSERT INTO usuario (cpf, nome, telefone, email, senha, adm) VALUES (?, ?, ?, ?, ?, ?)");
                 if ($sql->execute(array($cpf, $nome, $telefone, $email, $senha, $adm))){
                     $msgErr = "Dados cadastrados com sucesso!";
+                    header("location:index.php");
                 } else {
                     $msgErr = "Dados não cadastrados!";
                 };
@@ -137,7 +138,7 @@
                 <input type="password" name="senhaconf" placeholder="Confirme sua Senha" value="<?php echo $senhaconf?>">
                 <span class="obrigatorio">*<?php echo $senhaconfErr ?></span>
             </div>
-            <div class="textofield">
+            <div class="">
                 <label for="adm">Administrador</label>
                 <input type="checkbox" name="adm" placeholder="" value="<?php echo $adm?>">
             </div>
