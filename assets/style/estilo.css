@@ -212,9 +212,8 @@ body{
 }
 
 .btn-registro{
-	width: 60%;
-	padding: 16px 0px;
-	margin: 25px;
+	width: 100%;
+	padding: 16px;
 	border: none;
 	border-radius: 8px;
 	outline: 0px;
