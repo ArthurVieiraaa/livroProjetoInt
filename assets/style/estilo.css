@@ -414,7 +414,8 @@ form > h1{
 
 .d530rfrj0dj{
 	padding:5rem 0;
-	background-color:var(--color-0);
+	padding-bottom: 239px;
+	background-color:var(--color-secondary);
 	height:100%;
 	width: 100%;
 	display:flex;
@@ -439,6 +440,11 @@ form > h1{
 	transform: scale(1.5);
 }
 
+.fdfdfdf{
+	padding: 5rem;
+	text-align: center;
+	background-color: var(--color-0);
+}
 
 	/* h1lify9bj9 */
 
