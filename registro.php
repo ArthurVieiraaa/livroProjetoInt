@@ -120,13 +120,13 @@
             </div>
             <div class="textofield">
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" placeholder="CPF" value="<?php echo $cpf?>">
-                <span class="obrigatorio">*<?php echo $cpfErr ?></span>
+                <input type="text" name="cpf" required id="cpf" placeholder="000.000.000-00" maxlength="14" autocomplete="off" value="<?php echo $cpf?>">
+                <span id='span-error-cpf'>*<?php echo $cpfErr ?></span>
             </div>
             <div class="textofield">
                 <label for="telefone">Telefone</label>
-                <input type="text" name="telefone" placeholder="Telefone" value="<?php echo $telefone?>">
-                <span class="obrigatorio">*<?php echo $telefoneErr ?></span>
+                <input type="text" required id="phone" name="phone" placeholder="(00) 0 0000-0000" autocomplete="off" maxlength="15" value="<?php echo $telefone?>">
+                <span id='span-error-phone'>*<?php echo $telefoneErr ?></span>
             </div>
             <div class="textofield">
                 <label for="senha">Senha</label>
