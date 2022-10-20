@@ -46,9 +46,9 @@
             echo 'Senha não coincide.';
         };
         if (empty($_POST['adm'])){
-            $adm = false;
+            $adm = "nao";
         } else {
-            $adm = true;
+            $adm = "sim";
         }
 
         //Inserir no banco de dados
@@ -142,7 +142,7 @@
                 <label for="adm">Administrador</label>
                 <input type="checkbox" name="adm" placeholder="" value="<?php echo $adm?>">
             </div>
-            <div>
+            <div class="row">
             <input class="btn-registro" type="submit" value="Cadastrar" name="cadastro">
             <span class="obrigatorio"><?php echo $msgErr ?></span>
         </div>

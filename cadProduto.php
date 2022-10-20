@@ -5,29 +5,23 @@
 
     $msgErr = "";
     $titulo = "";
-    $tituloErr = "";
     $ano = "";
-    $anoErr = "";
     $autor = "";
-    $autorErr = "";
     $valor = 0;
-    $valorErr = "";
-    $imagem = "";
-    $imgErr = "";
 
 
     if (isset($_POST["submit"])){
-        if (!empty($_FILES["image"]["name"])){
+        if (!empty($_FILES["imagem"]["name"])){
             //PEGAR INFORMAÇÕES
-            $fileName = basename($_FILES["image"]["name"]);
+            $fileName = basename($_FILES["imagem"]["name"]);
             $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
 
             //PERMITIR SOMENTE ALGUNS FORMATOS
             $allowTypes = array('jpg', 'png', 'jpeg', 'gif','jfif');
 
             if (in_array($fileType, $allowTypes)){
-                $image = $_FILES['image']['tmp_name'];
-                $imgContent = file_get_contents($image);
+                $imagem = $_FILES['imagem']['tmp_name'];
+                $imgContent = file_get_contents($imagem);
 
                 if (isset($_POST['titulo'])){
                     $titulo = $_POST['titulo'];
@@ -57,7 +51,7 @@
 
                 //GRAVAR NO BANCO
                 $sql = $pdo->prepare("INSERT INTO livros (cod_livro, titulo, ano, autor, valor, imagem) VALUES (null, ?,?,?,?,?)");
-                if ($sql->execute(array($titulo, $ano, $autor, $valor, $imgContent))){
+                if ($sql->execute(array($titulo, $ano, $autor, $valor, $imagem))){
                     $msgErr = "Dados Cadastrados com suscessso";
                 } else {
                     $msgErr = "Dados não cadastrados!";
@@ -114,33 +108,33 @@
 <br><br>
     <fieldset class="card-cad">
         <div class="textfield">
-            <input class="input-login" type="text" name="titulo" placeholder="Nome" value="<?php echo $titulo?>">
-            <span class="obrigatorio">* <?php echo $tituloErr ?></span>
+            <input class="input-login" type="text" name="titulo" placeholder="titulo" value="<?php echo $titulo?>">
+            <span class="obrigatorio">*</span>
         </div>
 
         <div class="textfield">
-            <input class="input-login" type="text" name="email" placeholder="Descrição" value="<?php echo $ano?>">
-            <span class="obrigatorio">* <?php echo $anoErr ?></span>
+            <input class="input-login" type="text" name="ano" placeholder="ano" value="<?php echo $ano?>">
+            <span class="obrigatorio">*</span>
         </div>
 
         <div class="textfield">
-            <input class="input-login" type="text" name="valor" placeholder="Valor" value="<?php echo $autor?>">
-            <span class="obrigatorio">* <?php echo $autorErr ?></span>
+            <input class="input-login" type="text" name="autor" placeholder="autor" value="<?php echo $autor?>">
+            <span class="obrigatorio">*</span>
         </div>
         
         <div class="textfield">
             <input class="input-login" type="text" name="valor" placeholder="Valor" value="<?php echo $valor?>">
-            <span class="obrigatorio">* <?php echo $valorErr ?></span>
+            <span class="obrigatorio">*</span>
         </div>
         
         <div class="textfield">
             <input class="input-login" type="file" name="imagem" placeholder="Imagem" value="<?php echo $imagem?>">
-            <span class="obrigatorio">* <?php echo $imgErr ?></span>
+            <span class="obrigatorio">*</span>
         </div>
 
         <div class="row">
-                <input type="submit" class="btn-cad">
-                <button class="btn-cad" href="listprodutos">Produtos já cadastrados</button>
+                <input type="submit" class="btn-cad" value="Cadastrar" name="cadastro">
+                <button class="btn-cad" href="#">Produtos já cadastrados</button>
         </div>
     </fieldset>        
 </form>
