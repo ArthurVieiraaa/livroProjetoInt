@@ -162,7 +162,7 @@ body{
 }
 
 .sobree {
-	font-size: 12pt;
+	font-size: 12px;
 } 
         
 .textofield > input {
@@ -196,6 +196,11 @@ body{
 	color: #f0ffff94;
 }
 
+.checkbox-adm{
+	padding: 10px;
+
+}
+
 .btn-login{
 	width: 65%;
 	padding: 16px 0px;
@@ -213,9 +218,8 @@ body{
 }
 
 .btn-registro{
-	width: 60%;
-	padding: 16px 0px;
-	margin: 25px;
+	width: 100%;
+	padding: 25px;
 	border: none;
 	border-radius: 8px;
 	outline: 0px;
@@ -226,6 +230,10 @@ body{
 	background: rgb(0, 238, 255);
 	cursor: pointer;
 	box-shadow: 0px 10px 40px -12px rgb(0, 238, 255);
+}
+
+.btn-div{
+	margin-top: 10px;
 }
 
 .btn-cad{
@@ -409,6 +417,7 @@ form > h1{
 	padding:5rem 0;
 	background-color:var(--color-0);
 	height:100%;
+	width: 100%;
 	display:flex;
 	align-items:center;
 	justify-content:center;
@@ -420,6 +429,17 @@ form > h1{
 	font-weight:700;
 	text-align:center;
 }
+
+.d530rfrj0dj .c9932401 p{
+	max-width: 800px ;
+	max-height: 500px;
+	margin-top: 50px;
+	padding: 10px;
+	font-family: sans-serif;
+	font-size: 1.3rem;
+	transform: scale(1.5);
+}
+
 
 	/* h1lify9bj9 */
 

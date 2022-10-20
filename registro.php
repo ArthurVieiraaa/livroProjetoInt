@@ -147,8 +147,9 @@
             <span class="obrigatorio"><?php echo $msgErr ?></span>
         </div>
         </div>
-    </div>
     </form>
     
+
+    <script src="assets/javascript/cpf.js"></script>
 </body>
 </html>
