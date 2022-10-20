@@ -121,14 +121,14 @@
                 <div class="textofield">
                     <label for="cpf">CPF</label>
                     <input type="text" name="cpf" required id="cpf" placeholder="000.000.000-00" maxlength="14" autocomplete="off" value="<?php echo $cpf?>">
-                    <span id='span-error-cpf' style='color: red;'></span>
+                    <span id='span-error-cpf' style='color: #00c3ff;'>*</span>
                     
 
                 </div>
                 <div class="textofield">
                     <label for="phone">Telefone</label>
                     <input type="text" required id="phone" name="phone" placeholder="(00) 0 0000-0000" autocomplete="off" maxlength="15" value="<?php echo $telefone?>">
-                    <span id='span-error-phone' style='color: red;'></span>
+                    <span id='span-error-phone' style='color: #00c3ff;'>*</span>
 
 
 
@@ -143,11 +143,11 @@
                     <input type="password" name="senhaconf" placeholder="Confirme sua Senha" value="<?php echo $senhaconf?>">
                     <span class="obrigatorio">*<?php echo $senhaconfErr ?></span>
                 </div>
-                <div class="textofield">
-                    <label for="adm">Administrador</label>
+                <div class="checkbox-adm">
                     <input type="checkbox" name="adm" placeholder="" value="<?php echo $adm?>">
+                    <label for="adm">Administrador</label>
                 </div>
-                <div>
+                <div class="btn-div">
                     <input class="btn-registro" type="submit" value="Cadastrar" name="cadastro">
                     <span class="obrigatorio"><?php echo $msgErr ?></span>
                 </div>
