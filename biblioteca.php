@@ -9,6 +9,25 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 		<link rel="shortcut icon" href="imgs/logoicon.png" type="image/x-icon">
 		
+		<?php 
+			session_start(); 
+
+			if(!isset($_SESSION['logged'])){
+				header('Location: index.php');
+				unset($_SESSION['nome']);
+				unset($_SESSION['administrador']);
+				unset($_SESSION['logged']);
+				session_destroy();
+			};
+
+			if(isset($_GET['logout'])){
+				header('Location: index.php');
+				unset($_SESSION['nome']);
+				unset($_SESSION['administrador']);
+				unset($_SESSION['logged']);
+				session_destroy();
+			};
+		?>
 	</head>
 	<body>
 		<nav class="rf3siq6p3t">
@@ -33,6 +52,11 @@
 					<li class="rf3siq6p3t-item">
 						<input type="search" placeholder="Search...">
 					</li>
+					<?php if(isset($_SESSION['logged'])){ ?>
+					<li class="rf3siq6p3t-item">
+						<a href="?logout" class="rf3siq6p3t-links"><i class="fa-solid fa-arrow-up-right-from-square"></i>Sair</a>
+					</li>
+					<?php }; ?>
 				</ul>
 			</div>
 		</nav>

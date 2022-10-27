@@ -29,7 +29,7 @@
 }
 
 html{
-	scroll-behavior:smooth;
+	scroll-behavior: smooth;
 }
 
 body{
@@ -37,7 +37,7 @@ body{
 	height:100%;
 	line-height:18px;
 	color:var(--color-text);
-	overflow-x:hidden;
+	/* overflow-x:hidden; */
 	background-color:var(--color-secondary);
 }
 
@@ -414,8 +414,8 @@ form > h1{
 
 .d530rfrj0dj{
 	padding:5rem 0;
-	padding-bottom: 239px;
-	background-color:var(--color-secondary);
+	padding-bottom: 100px;
+	background-color:var(--color-0);
 	height:100%;
 	width: 100%;
 	display:flex;
@@ -440,6 +440,26 @@ form > h1{
 	transform: scale(1.5);
 }
 
+.sobre{
+	padding: 200px;
+	background-color:var(--color-secondary);
+	height:100%;
+	width: 100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.c9932401{
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	text-align: center;
+	max-width: 1080px;
+	font-size: 18px;
+	line-height: 20px;
+}
+
 .fdfdfdf{
 	padding: 5rem;
 	text-align: center;
@@ -460,7 +480,7 @@ form > h1{
 .h1lify9bj9 .c9932401 h1{
 	font-size:2.25rem;
 	line-height:1.333;
-	color: #00c3ff;
+	/* color: #00c3ff; */
 	font-weight:700;
 	text-align:center;
 }
@@ -480,8 +500,8 @@ form > h1{
 
 .h1lify9bj9 .c9932401 .g7n5ukakpg .f0axtplhol{
 	background-color:var(--color-0);
-	padding:50px;
-	height:100%;
+	padding:30px;
+	height:0100%;
 	display:flex;
 	align-items:center;
 	justify-content:center;
