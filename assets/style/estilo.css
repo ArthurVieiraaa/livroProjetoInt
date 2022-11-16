@@ -454,8 +454,7 @@ form > h1{
 	width: 100%;
 	height: 100%;
 	padding: 30px;
-	text-align: center;
-	max-width: 1080px;
+	max-width: 1285px;
 	font-size: 18px;
 	line-height: 20px;
 }
@@ -469,7 +468,7 @@ form > h1{
 	/* h1lify9bj9 */
 
 .h1lify9bj9{
-	padding:2rem;
+	padding:0rem;
 	background-color:var(--color-secondary);
 	height:100%;
 	display:flex;
@@ -483,6 +482,7 @@ form > h1{
 	/* color: #00c3ff; */
 	font-weight:700;
 	text-align:center;
+	margin: 30px;
 }
 
 .h1lify9bj9 .c9932401 .g7n5ukakpg{
