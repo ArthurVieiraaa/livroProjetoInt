@@ -33,7 +33,7 @@
                         unset($_SESSION['name']);
                         unset($_SESSION['logged']);
                         unset($_SESSION['email']);
-                        echo 'CPF ou Senha incorretos.';
+                        echo 'Email...errado';
                     };
 
                 };
@@ -87,58 +87,57 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<link rel="shortcut icon" href="imgs/logoicon.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem Vindo</title>
-</head>
-<body>
-    <nav class="rf3siq6p3t">
-        <div class="rf3siq6p3t-container">
-            <div class="rf3siq6p3t-logo">
-                <a href="index.php">
-                    <h3>Book's <i class="fa-solid fa-book-bookmark"></i></h3>
-                </a>
-            </div>
-            <div class="rf3siq6p3t-toggle" id="ui5r6qlhla">
-                <span class="u0hpid7tli"></span>
-                <span class="u0hpid7tli"></span>
-                <span class="u0hpid7tli"></span>
-            </div>
-            <ul class="rf3siq6p3t-menu">
-                <li class="rf3siq6p3t-item">
-                    <a href="registro.php" class="rf3siq6p3t-links active"><i class="fa-solid fa-user-plus"></i>Registre-se</a>
-                </li>	
-            </ul>
-        </div>
-    </nav>
-    <div class="main-login">
-        <div class="left-login">
-            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="biblioteca.html"  class="btn-visita">Visita</a> ou faça o registro</h1>
-        </div>
-        <div class="right-login">
-            <div class="card-login">
-                <h1>LOGIN</h1>
-                <form action="" method="post">
-                <div class="textfield">
-                    <label for="usuario">Email</label>
-                    <input type="text" required name="email" placeholder="Usuário">
-                    <!-- <span class="obrigatorio">* <?php echo $emailErr ?></span> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/style/estilo.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="shortcut icon" href="imgs/logoicon.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bem Vindo</title>
+    </head>
+    <body>
+        <nav class="rf3siq6p3t">
+            <div class="rf3siq6p3t-container">
+                <div class="rf3siq6p3t-logo">
+                    <a href="index.php">
+                        <h3>Book's <i class="fa-solid fa-book-bookmark"></i></h3>
+                    </a>
                 </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" required name="senha" placeholder="Senha">
-                    <!-- <span class="obrigatorio">* <?php echo $senhaErr ?></span> -->
+                <div class="rf3siq6p3t-toggle" id="ui5r6qlhla">
+                    <span class="u0hpid7tli"></span>
+                    <span class="u0hpid7tli"></span>
+                    <span class="u0hpid7tli"></span>
                 </div>
-                <button class="btn-login">Login</button>
+                <ul class="rf3siq6p3t-menu">
+                    <li class="rf3siq6p3t-item">
+                        <a href="registro.php" class="rf3siq6p3t-links active"><i class="fa-solid fa-user-plus"></i>Registre-se</a>
+                    </li>	
+                </ul>
             </div>
-                </form>
+        </nav>
+        <div class="main-login">
+            <div class="left-login">
+                <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="biblioteca.php"  class="btn-visita">Visita</a> ou faça o registro</h1>
+            </div>
+            <div class="right-login">
+                <div class="card-login">
+                    <h1>LOGIN</h1>
+                    <form action="" method="post">
+                        <div class="textfield">
+                            <label for="usuario">Email</label>
+                            <input type="text" required name="email" placeholder="Usuário">
+                        </div>
+                        <div class="textfield">
+                            <label for="senha">Senha</label>
+                            <input type="password" name="senha" placeholder="Senha">
+                        </div>
+                        <button class="btn-login">Login</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
+        <script src="assets/javascript/global.js"></script>
+    </body>
 </html>
