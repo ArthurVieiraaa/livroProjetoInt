@@ -119,11 +119,7 @@
     </nav>
     <div class="main-login">
         <div class="left-login">
-<<<<<<< HEAD
             <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="bbtVisita.php"  class="btn-visita">Visita</a> ou faça o registro</h1>
-=======
-            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="visitabbt.php"  class="btn-visita">Visita</a> ou faça o registro</h1>
->>>>>>> a15fe148f92229aee3f748b13306895dfaa6deb8
         </div>
         <div class="right-login">
             <div class="card-login">

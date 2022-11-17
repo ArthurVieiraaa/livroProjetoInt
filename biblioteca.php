@@ -344,12 +344,12 @@
           <div class="cart__products">
             <!-- Cart Empty -->
             <div class="cart__empty" data-empty-cart>
-              <img src="assets/imgs/emptycart.png" />
-              <div class="empty__title">Your bag is empty</div>
+              <img src="imgs/emptycart.png" />
+              <div class="empty__title">Seu carrinho está vazio!</div>
 
               <div class="empty__subtitle">
-                Looks like you haven’t added any items to the bag yet. Start
-                shopping to fill it in.
+                Parece que você ainda não adicionou nenhum item à sacola. Começar
+                compras para preenchê-lo.
               </div>
             </div>
             <!-- End Card Empty -->
@@ -365,9 +365,9 @@
 
           <!-- Cart Actions -->
           <div class="cart__actions">
-            <button class="cart__button" data-empty-cart>start shopping</button>
+            <button class="cart__button" data-empty-cart>Começar Compra</button>
             <button class="cart__button cart__button-secondary" data-not-empty-cart>
-              go to checkout
+              Vá para o checking
             </button>
             <div class="cart__summary" data-not-empty-cart>
               <!-- Summary Item -->
