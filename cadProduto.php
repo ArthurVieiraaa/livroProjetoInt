@@ -1,23 +1,18 @@
-<?php 
+<?php
     include "include/functions.php";
     include "include/MySql.php";
 
-
-    $msgErr = "";
-    $titulo = "";
-    $ano = "";
-    $autor = "";
+    $msgErro = "";
+    $titulo = $ano = $autor = "";
     $valor = 0;
-
 
     if (isset($_POST["submit"])){
         if (!empty($_FILES["imagem"]["name"])){
-            //PEGAR INFORMAÇÕES
+            //Pegar informações
             $fileName = basename($_FILES["imagem"]["name"]);
             $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
-
-            //PERMITIR SOMENTE ALGUNS FORMATOS
-            $allowTypes = array('jpg', 'png', 'jpeg', 'gif','jfif');
+            //Permitir somente alguns formatos
+            $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
 
             if (in_array($fileType, $allowTypes)){
                 $imagem = $_FILES['imagem']['tmp_name'];
@@ -27,45 +22,37 @@
                     $titulo = $_POST['titulo'];
                 } else {
                     $titulo = "";
-                };
-
+                }
                 if (isset($_POST['ano'])){
                     $ano = $_POST['ano'];
                 } else {
                     $ano = "";
-                };
-
+                }
                 if (isset($_POST['autor'])){
                     $autor = $_POST['autor'];
                 } else {
                     $autor = "";
-                };
-
+                }
                 if (isset($_POST['valor'])){
                     $valor = $_POST['valor'];
                 } else {
                     $valor = "";
-                };
-
-                
-
-                //GRAVAR NO BANCO
-                $sql = $pdo->prepare("INSERT INTO livros (cod_livro, titulo, ano, autor, valor, imagem) VALUES (null, ?,?,?,?,?)");
-                if ($sql->execute(array($titulo, $ano, $autor, $valor, $imagem))){
-                    $msgErr = "Dados Cadastrados com suscessso";
-                } else {
-                    $msgErr = "Dados não cadastrados!";
                 }
 
-
+                //Gravar no banco
+                $sql = $pdo->prepare("INSERT INTO livros (cod_livro, titulo, ano, autor, valor, imagem)
+                                      VALUES (null,?,?,?,?,?)");
+                if ($sql->execute(array($titulo, $ano, $autor, $valor, $imgContent))){
+                    $msgErro = "Dados cadastrados com suscesso!";
+                } else {
+                    $msgErro = "Dados não cadastrados!";
+                }
 
             } else {
-                $msgErr = "Desculpe, somente jpg, png, jpeg, gif, jfif são permitidas";
-            };
-        } else {
-            $msgErr = "Selecione uma imagem para upload";
-        };
-    };
+                $msgErro = "Desculpe, mas somente arquivos JPG, JPEG, PNG e GIF são permitidos";
+            }
+        } 
+    }
 
 
 ?>
@@ -103,37 +90,37 @@
         </div>
     </nav>
     <br><br>
-<form action="" method="POST">
+<form action="" method="post" enctype="multipart/form-data">
 <h1 class="">Cadastro de Produtos</h1>
 <br><br>
     <fieldset class="card-cad">
         <div class="textfield">
-            <input class="input-login" type="text" name="titulo" placeholder="titulo" value="<?php echo $titulo?>">
+            <input class="input-login" type="text" name="titulo" placeholder="Titulo">
             <span class="obrigatorio">*</span>
         </div>
 
         <div class="textfield">
-            <input class="input-login" type="text" name="ano" placeholder="ano" value="<?php echo $ano?>">
+            <input class="input-login" type="text" name="ano" placeholder="Ano">
             <span class="obrigatorio">*</span>
         </div>
 
         <div class="textfield">
-            <input class="input-login" type="text" name="autor" placeholder="autor" value="<?php echo $autor?>">
+            <input class="input-login" type="text" name="autor" placeholder="Autor">
             <span class="obrigatorio">*</span>
         </div>
         
         <div class="textfield">
-            <input class="input-login" type="text" name="valor" placeholder="Valor" value="<?php echo $valor?>">
+            <input class="input-login" type="text" name="valor" placeholder="Valor">
             <span class="obrigatorio">*</span>
         </div>
         
         <div class="textfield">
-            <input class="input-login" type="file" name="imagem" placeholder="Imagem" value="<?php echo $imagem?>">
+            <input class="input-login" type="file" name="imagem" placeholder="Imagem">
             <span class="obrigatorio">*</span>
         </div>
 
         <div class="row">
-                <input type="submit" class="btn-cad" value="Cadastrar" name="cadastro">
+                <input type="submit" class="btn-cad" value="Cadastrar" name="submit">
                 <button class="btn-cad" href="#">Produtos já cadastrados</button>
         </div>
     </fieldset>        
