@@ -121,6 +121,7 @@
             <div class="left-login">
                 <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="biblioteca.php"  class="btn-visita">Visita</a> ou faça o registro</h1>
             </div>
+<<<<<<< HEAD
             <div class="right-login">
                 <div class="card-login">
                     <h1>LOGIN</h1>
@@ -135,6 +136,36 @@
                         </div>
                         <button class="btn-login">Login</button>
                     </form>
+=======
+            <ul class="rf3siq6p3t-menu">
+                <li class="rf3siq6p3t-item">
+                    <a href="registro.php" class="rf3siq6p3t-links active"><i class="fa-solid fa-user-plus"></i>Registre-se</a>
+                </li>	
+            </ul>
+        </div>
+    </nav>
+    <div class="main-login">
+        <div class="left-login">
+<<<<<<< HEAD
+            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="bbtVisita.php"  class="btn-visita">Visita</a> ou faça o registro</h1>
+=======
+            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="visitabbt.php"  class="btn-visita">Visita</a> ou faça o registro</h1>
+>>>>>>> a15fe148f92229aee3f748b13306895dfaa6deb8
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <form action="" method="post">
+                <div class="textfield">
+                    <label for="usuario">Email</label>
+                    <input type="text" required name="email" placeholder="Usuário">
+                    <!-- <span class="obrigatorio">* <?php echo $emailErr ?></span> -->
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" required name="senha" placeholder="Senha">
+                    <!-- <span class="obrigatorio">* <?php echo $senhaErr ?></span> -->
+>>>>>>> 9aaf51dd0cbf81ccf909bcc6b260bd6b67513f0d
                 </div>
             </div>
         </div>

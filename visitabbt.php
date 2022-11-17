@@ -23,27 +23,34 @@
 					<span class="u0hpid7tli"></span>
 					<span class="u0hpid7tli"></span>
 				</div>
+				<ul class="rf3siq6p3t-menu">
+					<li class="rf3siq6p3t-item">
+						<a href="#" class="rf3siq6p3t-links active"><i class="fa-solid fa-house"></i>Inicio</a>
+					</li>	
+					<li class="rf3siq6p3t-item">
+						<a href="carrinho.php" class="rf3siq6p3t-links"><i class="fa-solid fa-cart-arrow-down"></i>Carrinho</a>
+					</li>
+					<li class="rf3siq6p3t-item">
+						<input type="search" placeholder="Search...">
+					</li>
+				</ul>
 			</div>
 		</nav>
-
-		<div class="fdfdfdf">
-			<h1>Um pouco sobre nosso <span>Projeto Integrador</span></h1>
-		</div>
-
-		<div class="sobre">
+		<div class="d530rfrj0dj">
 			<div class="c9932401">
-				<p>Nossa equipe desenvolveu uma Biblioteca Virtual com o objetivo de se tornar uma plataforma de
-					leitura virtual rapida e accesivel, com isso pensamos em breve lançar o aplicativo,O projeto foi
-					criado em 2022 por uma equipe composta por cinco integrantes estudantes do Senac Joinville.</p>
+				<h1>Bem vindo(a) a nossa <span>Biblioteca Virtual</span></h1>
 			</div>
 		</div>
-        <!-- <div>
-			<container>
-			<div class="sobree">
-				<h1>Nossa equipe desenvolveu uma Biblioteca Virtual com o objetivo de se tornar uma plataforma de leitura virtual rapida e accesivel, com isso pensamos em breve lançar o aplicativo, O projeto foi criado em 2022 por uma equipe composta por cinco integrantes estudantes do Senac Joinville.</h1>
+
+		<div class="h1lify9bj9">
+			<div class="c9932401">
+				<h1>Livros <span>disponíveis</span></h1>
+				<div id="line-01" class="g7n5ukakpg"></div>
+				<a href="pagLivros/endurance.html"></a>
+				<div id="line-02" class="g7n5ukakpg"></div>
 			</div>
-		</div> -->
-		    </container>
+		</div>
+
 		<footer class="sy0tkj9wro">
 			<div class="sy0tkj9wro-container">
 				<div class="sy0tkj9wro-i logo">
