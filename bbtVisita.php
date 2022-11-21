@@ -73,7 +73,7 @@
 				<a href="pagLivros/endurance.html"></a>
 				<div id="line-02" class="g7n5ukakpg"></div>
 			</div>
-		</div>
+		</div>	
 
 		<footer class="sy0tkj9wro">
 			<div class="sy0tkj9wro-container">

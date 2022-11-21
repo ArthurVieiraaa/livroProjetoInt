@@ -4,16 +4,16 @@
 
 :root{
 	/* global */
-	--color-primary: #00c3ff;
-	--color-0: #201b2c;
-	--color-secondary: #2f2841;
+	--color-primary:#00c3ff;
+	--color-0:#201b2c;
+	--color-secondary:#2f2841;
 
 	/* text's */
-	--color-span: #adacac;
-	--color-text: #d7d7d7;
+	--color-span:#adacac;
+	--color-text:#d7d7d7;
 
 	/* geral */			
-	--color-stop1: #d400ff;
+	--color-stop1:#d400ff;
 	--direction:-160deg;
 }
 
@@ -413,8 +413,8 @@ form > h1{
 	/* d530rfrj0dj */
 
 .d530rfrj0dj{
-	padding:5rem 0;
-	padding-bottom: 100px;
+	padding:2rem 0;
+	padding-bottom: 30px;
 	background-color:var(--color-0);
 	height:100%;
 	width: 100%;
@@ -454,8 +454,7 @@ form > h1{
 	width: 100%;
 	height: 100%;
 	padding: 30px;
-	text-align: center;
-	max-width: 1080px;
+	max-width: 1285px;
 	font-size: 18px;
 	line-height: 20px;
 }
@@ -469,7 +468,7 @@ form > h1{
 	/* h1lify9bj9 */
 
 .h1lify9bj9{
-	padding:2rem;
+	padding:0rem;
 	background-color:var(--color-secondary);
 	height:100%;
 	display:flex;
@@ -483,6 +482,7 @@ form > h1{
 	/* color: #00c3ff; */
 	font-weight:700;
 	text-align:center;
+	margin: 30px;
 }
 
 .h1lify9bj9 .c9932401 .g7n5ukakpg{
