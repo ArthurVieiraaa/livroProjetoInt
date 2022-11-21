@@ -87,7 +87,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -121,7 +121,6 @@
             <div class="left-login">
                 <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="biblioteca.php"  class="btn-visita">Visita</a> ou faça o registro</h1>
             </div>
-<<<<<<< HEAD
             <div class="right-login">
                 <div class="card-login">
                     <h1>LOGIN</h1>
@@ -136,7 +135,6 @@
                         </div>
                         <button class="btn-login">Login</button>
                     </form>
-=======
             <ul class="rf3siq6p3t-menu">
                 <li class="rf3siq6p3t-item">
                     <a href="registro.php" class="rf3siq6p3t-links active"><i class="fa-solid fa-user-plus"></i>Registre-se</a>
@@ -161,7 +159,6 @@
                     <label for="senha">Senha</label>
                     <input type="password" required name="senha" placeholder="Senha">
                     <!-- <span class="obrigatorio">* <?php echo $senhaErr ?></span> -->
->>>>>>> 9aaf51dd0cbf81ccf909bcc6b260bd6b67513f0d
                 </div>
             </div>
         </div>
