@@ -99,7 +99,7 @@
     </nav>
     <div class="main-login">
         <div class="left-login">
-            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a href="bbtVisita.php"  class="btn-visita">Visita</a> ou faça o registro</h1>
+            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a class="btn-visita" href="bbtVisita.html">Visita</a> ou faça o registro</h1>
         </div>
         <div class="right-login">
             <div class="card-login">
