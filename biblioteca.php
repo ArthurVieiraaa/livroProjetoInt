@@ -92,239 +92,44 @@
       <!-- Product List -->
       <div class="products-list">
         <!-- Product -->
+        
         <div class="product">
           <!-- Product Image -->
+          
           <div class="product__image">
-            <img
-              src="assets/images/product-image.webp"
-              class="product__image"
-            />
+<?php
+    include "include/MySql.php";
+
+    $sql = $pdo->prepare("SELECT * FROM livros");
+    if ($sql->execute()){
+        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($info as $key=>$values){
+            $imagem = $values['imagem'];
+            echo '<img src="data:image/jpg;charset=utf8;base64,'.base64_encode($imagem).'"/><br>';
+            echo '<hr>';
+        }
+    }
+?>
             <button class="cart__button cart__button--list" data-add-product>Add</button>
           </div>
           <!-- End Product Image -->
-          <div class="product__title">Apollo Running Short</div>
-          <div class="product__price">$50.00</div>
-          <div class="product__rating">
-            <div class="rating">
-              <span class="rating__star"> star </span>
+          <?php
 
-              <span class="rating__star"> star </span>
+    $sql = $pdo->prepare("SELECT * FROM livros");
+    if ($sql->execute()){
+        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-            </div>
-            <div class="rating__total">(8)</div>
+        foreach($info as $key=>$values){
+            echo 'Titulo: '.$values['titulo'].'<br>';
+            echo 'Autor: '.$values['autor'].'<br>';
+            echo 'Ano: '.$values['ano'].'<br>';
+            echo 'Valor: '.$values['valor'].'<br>';
+        }
+    }
+?>
           </div>
         </div>
-        <!-- End Product -->
-        <!-- Product -->
-        <div class="product">
-          <!-- Product Image -->
-          <div class="product__image">
-            <img
-              src="assets/images/product-image.webp"
-              class="product__image"
-            />
-            <button class="cart__button cart__button--list" data-add-product>Add</button>
-          </div>
-          <!-- End Product Image -->
-          <div class="product__title">Apollo Running Short</div>
-          <div class="product__price">$50.00</div>
-          <div class="product__rating">
-            <div class="rating">
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-            </div>
-            <div class="rating__total">(8)</div>
-          </div>
-        </div>
-        <!-- End Product -->
-        <!-- Product -->
-        <div class="product">
-          <!-- Product Image -->
-          <div class="product__image">
-            <img
-              src="assets/images/product-image.webp"
-              class="product__image"
-            />
-            <button class="cart__button cart__button--list" data-add-product>Add</button>
-          </div>
-          <!-- End Product Image -->
-          <div class="product__title">Apollo Running Short</div>
-          <div class="product__price">$50.00</div>
-          <div class="product__rating">
-            <div class="rating">
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-            </div>
-            <div class="rating__total">(8)</div>
-          </div>
-        </div>
-        <!-- End Product -->
-        <!-- Product -->
-        <div class="product">
-          <!-- Product Image -->
-          <div class="product__image">
-            <img
-              src="assets/images/product-image.webp"
-              class="product__image"
-            />
-            <button class="cart__button cart__button--list" data-add-product>Add</button>
-          </div>
-          <!-- End Product Image -->
-          <div class="product__title">Apollo Running Short</div>
-          <div class="product__price">$50.00</div>
-          <div class="product__rating">
-            <div class="rating">
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-            </div>
-            <div class="rating__total">(8)</div>
-          </div>
-        </div>
-        <!-- End Product -->
-        <!-- Product -->
-        <div class="product">
-          <!-- Product Image -->
-          <div class="product__image">
-            <img
-              src="assets/images/product-image.webp"
-              class="product__image"
-            />
-            <button class="cart__button cart__button--list" data-add-product>Add</button>
-          </div>
-          <!-- End Product Image -->
-          <div class="product__title">Apollo Running Short</div>
-          <div class="product__price">$50.00</div>
-          <div class="product__rating">
-            <div class="rating">
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-            </div>
-            <div class="rating__total">(8)</div>
-          </div>
-        </div>
-        <!-- End Product -->
-        <!-- Product -->
-        <div class="product">
-          <!-- Product Image -->
-          <div class="product__image">
-            <img
-              src="assets/images/product-image.webp"
-              class="product__image"
-            />
-            <button class="cart__button cart__button--list" data-add-product>Add</button>
-          </div>
-          <!-- End Product Image -->
-          <div class="product__title">Apollo Running Short</div>
-          <div class="product__price">$50.00</div>
-          <div class="product__rating">
-            <div class="rating">
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-            </div>
-            <div class="rating__total">(8)</div>
-          </div>
-        </div>
-        <!-- End Product -->
-        <!-- Product -->
-        <div class="product">
-          <!-- Product Image -->
-          <div class="product__image">
-            <img
-              src="assets/images/product-image.webp"
-              class="product__image"
-            />
-            <button class="cart__button cart__button--list" data-add-product>Add</button>
-          </div>
-          <!-- End Product Image -->
-          <div class="product__title">Apollo Running Short</div>
-          <div class="product__price">$50.00</div>
-          <div class="product__rating">
-            <div class="rating">
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-            </div>
-            <div class="rating__total">(8)</div>
-          </div>
-        </div>
-        <!-- End Product -->
-        <!-- Product -->
-        <div class="product">
-          <!-- Product Image -->
-          <div class="product__image">
-            <img
-              src="assets/images/product-image.webp"
-              class="product__image"
-            />
-            <button class="cart__button cart__button--list" data-add-product>Add</button>
-          </div>
-          <!-- End Product Image -->
-          <div class="product__title">Apollo Running Short</div>
-          <div class="product__price">$50.00</div>
-          <div class="product__rating">
-            <div class="rating">
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-
-              <span class="rating__star"> star </span>
-            </div>
-            <div class="rating__total">(8)</div>
-          </div>
-        </div>
-        <!-- End Product -->
-      </div>
-      <!-- End Product List -->
 
       <!-- Cart -->
       <div class="cart">

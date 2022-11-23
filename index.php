@@ -8,7 +8,7 @@
         if( isset($_POST['email']) && isset($_POST['senha']) ){
                 
             if( empty($emailLogin) && empty($passwordLogin) ){
-                echo 'Insira corretamente as informações: CPF, SENHA.';
+                echo 'Insira corretamente as informações: Email, SENHA.';
             }else{
                 $query = $pdo->prepare('SELECT * FROM usuario WHERE `email` = ? AND `senha` = ?');
                 if($query->execute(array($emailLogin, $passwordLogin))){
@@ -26,7 +26,7 @@
                         unset($_SESSION['name']);
                         unset($_SESSION['logged']);
                         unset($_SESSION['email']);
-                        echo 'CPF ou Senha incorretos.';
+                        echo 'Email ou Senha incorretos.';
                     };
                 };
             };
