@@ -145,12 +145,12 @@
           <div class="cart__products">
             <!-- Cart Empty -->
             <div class="cart__empty" data-empty-cart>
-              <img src="assets/imgs/emptycart.png" />
-              <div class="empty__title">Your bag is empty</div>
+              <img src="imgs/emptycart.png" />
+              <div class="empty__title">Seu carrinho está vazio!</div>
 
               <div class="empty__subtitle">
-                Looks like you haven’t added any items to the bag yet. Start
-                shopping to fill it in.
+			  	Parece que você ainda não adicionou nenhum item à sacola. Começar
+                compras para preenchê-lo.
               </div>
             </div>
             <!-- End Card Empty -->
@@ -166,7 +166,7 @@
 
           <!-- Cart Actions -->
           <div class="cart__actions">
-            <button class="cart__button" data-empty-cart>start shopping</button>
+            <button class="cart__button" data-empty-cart>Finalizar Compra</button>
             <button class="cart__button cart__button-secondary" data-not-empty-cart>
               go to checkout
             </button>
@@ -174,28 +174,28 @@
               <!-- Summary Item -->
               <div class="summary__item">
                 <div class="summary__label">Subtotal:</div>
-                <div class="summary__value" data-subtotal>$0.00</div>
+                <div class="summary__value" data-subtotal>R$0.00</div>
               </div>
               <!-- End Summary Item -->
 
               <!-- Summary Item -->
               <div class="summary__item">
-                <div class="summary__label">Shipping:</div>
-                <div class="summary__value">$0.00</div>
+                <div class="summary__label">Frete:</div>
+                <div class="summary__value">R$0.00</div>
               </div>
               <!-- End Summary Item -->
 
               <!-- Summary Item -->
               <div class="summary__item">
-                <div class="summary__label">Discount:</div>
-                <div class="summary__value">$0.0</div>
+                <div class="summary__label">Desconto:</div>
+                <div class="summary__value">R$0.00</div>
               </div>
               <!-- End Summary Item -->
 
               <!-- Summary Item -->
               <div class="summary__item">
-                <div class="summary__label">Grand Total:</div>
-                <div class="summary__value" data-grand-total>$0.00</div>
+                <div class="summary__label">Total Final:</div>
+                <div class="summary__value" data-grand-total>R$0.00</div>
               </div>
               <!-- End Summary Item -->
             </div>
