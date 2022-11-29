@@ -89,14 +89,9 @@
 
 				<div class="container">
 
-      <!-- Product List -->
-      <div class="products-list">
-        <!-- Product -->
-        
-        <div class="product">
-          <!-- Product Image -->
+      
           
-          <div class="product__image">
+          
 <?php
     include "include/MySql.php";
 
@@ -106,15 +101,15 @@
 
         foreach($info as $key=>$values){
             $imagem = $values['imagem'];
-            echo '<img src="data:image/jpg;charset=utf8;base64,'.base64_encode($imagem).'"/><br>';
-            echo '<hr>';
+      		echo '<div class="products-list">';
+        
+        	echo '<div class="product">';
+			echo '<div class="product__image">';
+            echo '<img src="data:image/jpg;charset=utf8;base64,'.base64_encode($imagem).'"/><br>'; 
         }
     }
-?>
-            <button class="cart__button cart__button--list" data-add-product>Add</button>
-          </div>
-          <!-- End Product Image -->
-          <?php
+            echo '<button class="cart__button cart__button--list" data-add-product>Comprar</button>';
+          echo '</div>';
 
     $sql = $pdo->prepare("SELECT * FROM livros");
     if ($sql->execute()){
@@ -124,12 +119,13 @@
             echo 'Titulo: '.$values['titulo'].'<br>';
             echo 'Autor: '.$values['autor'].'<br>';
             echo 'Ano: '.$values['ano'].'<br>';
-            echo 'Valor: '.$values['valor'].'<br>';
+            echo 'Valor: R$'.$values['valor'].'<br>';
+			echo '</div>';
+        	echo '</div>';
         }
     }
 ?>
-          </div>
-        </div>
+          
 
       <!-- Cart -->
       <div class="cart">
@@ -146,18 +142,17 @@
             <!-- Cart Empty -->
             <div class="cart__empty" data-empty-cart>
               <img src="assets/imgs/emptycart.png" />
-              <div class="empty__title">Your bag is empty</div>
+              <div class="empty__title">Seu carrinho está vazio</div>
 
               <div class="empty__subtitle">
-                Looks like you haven’t added any items to the bag yet. Start
-                shopping to fill it in.
+                Parece que você não tem nenhum item no carrinho. Comece a comprar para o encher.
               </div>
             </div>
             <!-- End Card Empty -->
 
             <!-- Card Total Items -->
             <div class="cart__total-items" data-not-empty-cart>
-              <span class="cart__total-label"> Total Items: </span>
+              <span class="cart__total-label"> Total de itens: </span>
               <span class="cart__total-value"> 0 </span>
             </div>
             <!-- End Card Total Items -->
@@ -166,9 +161,9 @@
 
           <!-- Cart Actions -->
           <div class="cart__actions">
-            <button class="cart__button" data-empty-cart>start shopping</button>
+            <button class="cart__button" data-empty-cart>Comece a comprar</button>
             <button class="cart__button cart__button-secondary" data-not-empty-cart>
-              go to checkout
+              Ir para o pagamento
             </button>
             <div class="cart__summary" data-not-empty-cart>
               <!-- Summary Item -->
@@ -180,21 +175,21 @@
 
               <!-- Summary Item -->
               <div class="summary__item">
-                <div class="summary__label">Shipping:</div>
+                <div class="summary__label">Frete:</div>
                 <div class="summary__value">$0.00</div>
               </div>
               <!-- End Summary Item -->
 
               <!-- Summary Item -->
               <div class="summary__item">
-                <div class="summary__label">Discount:</div>
+                <div class="summary__label">Desconto:</div>
                 <div class="summary__value">$0.0</div>
               </div>
               <!-- End Summary Item -->
 
               <!-- Summary Item -->
               <div class="summary__item">
-                <div class="summary__label">Grand Total:</div>
+                <div class="summary__label">Total:</div>
                 <div class="summary__value" data-grand-total>$0.00</div>
               </div>
               <!-- End Summary Item -->
