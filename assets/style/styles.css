@@ -2,7 +2,7 @@
   --emerald: #00c3ff;
   --porcelain: #f1f2f3;
   --white: #ffffff;
-  --gray: rgba(0, 0, 0, 0.5);
+  --gray: rgba(0 0 0 / 50%);
   --shark: #1d1f22;
 }
 
@@ -131,7 +131,7 @@
 .cart__content {
   margin-top: 100px;
   width: 408px;
-  height: 90vh;
+  height: 91vh;
   background-color: var(--white);
   float: right;
   padding: 24px;
