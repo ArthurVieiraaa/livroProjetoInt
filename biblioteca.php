@@ -141,20 +141,11 @@
           <div class="cart__products">
             <!-- Cart Empty -->
             <div class="cart__empty" data-empty-cart>
-<<<<<<< HEAD
-              <img src="assets/imgs/emptycart.png" />
+              <img src="imgs/emptycart.png" />
               <div class="empty__title">Seu carrinho está vazio</div>
 
               <div class="empty__subtitle">
                 Parece que você não tem nenhum item no carrinho. Comece a comprar para o encher.
-=======
-              <img src="imgs/emptycart.png" />
-              <div class="empty__title">Seu carrinho está vazio!</div>
-
-              <div class="empty__subtitle">
-			  	Parece que você ainda não adicionou nenhum item à sacola. Começar
-                compras para preenchê-lo.
->>>>>>> de47b4778a13a3e714e351ab757857db407825bd
               </div>
             </div>
             <!-- End Card Empty -->
@@ -170,11 +161,7 @@
 
           <!-- Cart Actions -->
           <div class="cart__actions">
-<<<<<<< HEAD
             <button class="cart__button" data-empty-cart>Comece a comprar</button>
-=======
-            <button class="cart__button" data-empty-cart>Finalizar Compra</button>
->>>>>>> de47b4778a13a3e714e351ab757857db407825bd
             <button class="cart__button cart__button-secondary" data-not-empty-cart>
               Ir para o pagamento
             </button>
@@ -189,34 +176,21 @@
               <!-- Summary Item -->
               <div class="summary__item">
                 <div class="summary__label">Frete:</div>
-<<<<<<< HEAD
                 <div class="summary__value">$0.00</div>
-=======
-                <div class="summary__value">R$0.00</div>
->>>>>>> de47b4778a13a3e714e351ab757857db407825bd
               </div>
               <!-- End Summary Item -->
 
               <!-- Summary Item -->
               <div class="summary__item">
                 <div class="summary__label">Desconto:</div>
-<<<<<<< HEAD
                 <div class="summary__value">$0.0</div>
-=======
-                <div class="summary__value">R$0.00</div>
->>>>>>> de47b4778a13a3e714e351ab757857db407825bd
               </div>
               <!-- End Summary Item -->
 
               <!-- Summary Item -->
               <div class="summary__item">
-<<<<<<< HEAD
                 <div class="summary__label">Total:</div>
                 <div class="summary__value" data-grand-total>$0.00</div>
-=======
-                <div class="summary__label">Total Final:</div>
-                <div class="summary__value" data-grand-total>R$0.00</div>
->>>>>>> de47b4778a13a3e714e351ab757857db407825bd
               </div>
               <!-- End Summary Item -->
             </div>
