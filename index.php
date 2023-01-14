@@ -93,18 +93,23 @@
             </div>
             <ul class="rf3siq6p3t-menu">
                 <li class="rf3siq6p3t-item">
-                    <a href="registro.php" class="rf3siq6p3t-links active"><i class="fa-solid fa-user-plus"></i>Registre-se</a>
+                    <a href="registro.php" class="rf3siq6p3t-links"><i class="fa-solid fa-user-plus"></i>Registre-se</a>
                 </li>	
+                |
+                <li class="rf3siq6p3t-item">
+                    <a href="adm.php" class="rf3siq6p3t-links"><i class="fa-solid fa-user-lock"></i>Admin</a>
+                </li>
             </ul>
         </div>
     </nav>
     <div class="main-login">
         <div class="left-login">
-            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a class="btn-visita" href="bbtVisita.html">Visita</a> ou faça o registro</h1>
+            <h1 >Bem Vindo a nossa <a class="btn-visita" href="sobre.html">Biblioteca Virtual</a><br><br>Faça uma <a class="btn-visita" href="bbtVisita.php">Visita</a> ou faça o registro</h1>
         </div>
         <div class="right-login">
             <div class="card-login">
                 <h1>LOGIN</h1>
+                <br>
                 <form action="" method="post">
                 <div class="textfield">
                     <label for="usuario">Email</label>
@@ -116,11 +121,7 @@
                     <input type="password" required name="senha" placeholder="Senha">
                     <!-- <span class="obrigatorio">* <?php echo $senhaErr ?></span> -->
                 </div>
-                <button class="liquid">Login</button> 
-                <a href="biblioteca.php">
-                    <span>Button</span>
-                    <div class="liquid"></div>   
-                </a> 
+                <button class="btn-login">Login</button>
             </div>
             </form>
         </div>

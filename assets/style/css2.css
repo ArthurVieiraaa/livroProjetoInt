@@ -1,4 +1,4 @@
-a .liquid::before{
+/* a .liquid::before{ 
     border-radius: 45%;
     background: rgba(20, 20, 20, 1);
     animation: animate 5s linear infinite;
@@ -21,4 +21,4 @@ a:hover .liquid{
     100% {
         transform: translate(-50%, -75%) rotate(360deg);
     }
-}
+} */
