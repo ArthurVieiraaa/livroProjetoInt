@@ -106,7 +106,7 @@
     <form action="" method="POST">
         <div class="main-adm">
         <div class="card-adm">
-                <h1>LOGIN</h1>
+                <h1>ADMINISTRAÇÃO</h1>
                 <br>
                 <form action="" method="post">
                 <div class="textfield">

@@ -73,7 +73,7 @@
     <nav class="rf3siq6p3t">
         <div class="rf3siq6p3t-container">
             <div class="rf3siq6p3t-logo">
-                <a href="biblioteca.php">
+                <a href="paineladm.php">
                     <h3>Book's <i class="fa-solid fa-book-bookmark"></i></h3>
                 </a>
             </div>
