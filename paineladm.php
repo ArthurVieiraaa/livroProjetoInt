@@ -40,11 +40,24 @@
 			</div>
 		</div>
 
-        <div class="container">
         <div class="pcadproduto">
-            <div class="c9932401">
-                <a href="cadproduto.php">Cadastro de Produtos</a>
-                <img src="imgs/cadprodutos.png"/>
+            <div class="ct-cadprodutos">
+                <h2>Cadastro de Produtos:</h2>
+                <br>
+                <a class="btn-visita" href="cadProduto.php">Ir para página</a>
+                <br>
+                <br>
+                <img src="imgs/cadprodutos.png" width="550px" />
+            </div>
+        </div>
+        <div class="pcadproduto">
+            <div class="ct-cadprodutos">
+                <h2>Cadastro de Produtos:</h2>
+                <br>
+                <a class="btn-visita" href="cadProduto.php">Ir para página</a>
+                <br>
+                <br>
+                <img src="imgs/cadprodutos.png" width="550px" />
             </div>
         </div>
         </div>

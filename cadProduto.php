@@ -84,7 +84,7 @@
             </div>
             <ul class="rf3siq6p3t-menu">
                 <li class="rf3siq6p3t-item">
-                    
+                    <a href="paineladm.php" class="rf3siq6p3t-links"><i class="fa-sharp fa-solid fa-house"></i>Voltar</a>
                 </li>	
             </ul>
         </div>
