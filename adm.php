@@ -1,73 +1,66 @@
-<?php
+ <?php
     include "include/MySql.php";
+    include "include/functions.php";
+session_start();
 
-    $email = $nome = $cpf = $telefone = $senha = $senhaconf = $adm = "";
-    $emailErr = $nomeErr = $cpfErr = $telefoneErr = $senhaErr = $senhaconfErr = $admErr = $msgErr = "";
+if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true) {
 
-    function test_input($data){
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+} else {
 
-    if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['cadastro'])){
-        if (empty($_POST['email'])){
-            $emailErr = "Email é obrigatório!";
-        } else {
-            $email = test_input($_POST["email"]);
-        }
-        if (empty($_POST['nome'])){
-            $nomeErr = "Nome é obrigatório!";
-        } else {
-            $nome = test_input($_POST["nome"]);
-        }
-        if (empty($_POST['cpf'])){
-            $cpfErr = "CPF é obrigatório!";
-        } else {
-            $cpf = test_input($_POST["cpf"]);
-        }
-        if (empty($_POST['telefone'])){
-            $telefoneErr = "Telefone é obrigatório!";
-        } else {
-            $telefone = test_input($_POST["telefone"]);
-        }
-        if (empty($_POST['senha'])){
-            $senhaErr = "Senha é obrigatório!";
-        } else {
-            $senha = test_input($_POST["senha"]);
-        }
-        if (empty($_POST['senhaconf'])){
-            $senhaconfErr = "Confirmar sua Senha é obrigatório!";
-        } else {
-            $senhaconf = test_input($_POST["senhaconf"]);
-        }
-        if($senhaconf !== $senha){
-            echo 'Senha não coincide.';
-        };
-        if (empty($_POST['adm'])){
-            $adm = "Não";
-        } else {
-            $adm = "Sim";
-        }
+}
 
-        //Inserir no banco de dados
-          $sql = $pdo->prepare('SELECT * FROM usuario WHERE email = ?');
-          if($sql->execute(array($email))){
-            if($sql->rowCount() > 0){
-                echo 'Email ja cadastrado';
-            }else {
-                $sql = $pdo->prepare("INSERT INTO usuario (cpf, nome, telefone, email, senha, adm) VALUES (?, ?, ?, ?, ?, ?)");
-                if ($sql->execute(array($cpf, $nome, $telefone, $email, $senha, $adm))){
-                    $msgErr = "Dados cadastrados com sucesso!";
-                    header("location:index.php");
-                } else {
-                    $msgErr = "Dados não cadastrados!";
-                };
-            };
-          };                    
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    }
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+
+
+  if($email === 'admin' && $senha === 'admin123') {
+    $_SESSION['is_admin'] = true;
+    header('Location: paineladm.php');
+    exit();
+  } else {
+    $error_message = 'Usuário ou senha incorretos';
+  }
+}
+
+
+    // include "include/MySql.php";
+    // include "include/functions.php";
+    // session_start();
+    // if ($_SERVER['REQUEST_METHOD'] == "POST"){
+    //     $emailLogin = $_POST['email'];
+    //     $passwordLogin = $_POST['senha'];
+    //     if( isset($_POST['email']) && isset($_POST['senha']) ){
+                
+    //         if( empty($emailLogin) && empty($passwordLogin) ){
+    //             echo 'Insira corretamente as informações: Email, SENHA.';
+    //         }else{
+    //             $query = $pdo->prepare('SELECT * FROM usuario WHERE `email` = ? AND `senha` = ?');
+    //             if($query->execute(array($emailLogin, $passwordLogin))){
+    //                 $row = $query->fetchAll(PDO::FETCH_ASSOC);
+    //                 foreach($row as $k){
+    //                     $email = $k['email'];
+    //                     $name = $k['nome'];
+    //                 };
+    //                 if(count($row) > 0){
+    //                     $_SESSION['email'] = $email;
+    //                     $_SESSION['name'] = $nome;
+    //                     $_SESSION['logged'] = true;
+    //                     header('Location: biblioteca.php');
+    //                 }else{
+    //                     unset($_SESSION['name']);
+    //                     unset($_SESSION['logged']);
+    //                     unset($_SESSION['email']);
+    //                     echo 'Email ou Senha incorretos.';
+    //                 };
+    //             };
+    //         };
+    //     }else{
+    //         echo 'Insira todas as informações.';
+    //         exit();
+    //     };
+    // };
 ?>
 
 <!DOCTYPE html>

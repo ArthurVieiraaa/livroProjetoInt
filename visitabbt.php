@@ -58,11 +58,11 @@
 						<h3>Book's <i class="fa-solid fa-book-bookmark"></i></h3>
 					</a>
 				</div>
-			<div class="sy0tkj9wro-i">
-				<p>Nossa equipe - <span>@Vieiraaa (Arthur)</span> | <span>@Cruz (Gabriel)</span> | <span>@LipeeeSZ (Felipe Vieira)</span> | <span>@Galdino (Henrique)</span> | <span>@Cordt (Lukas)</span></p>
+				<div class="sy0tkj9wro-i">
+				<p>Nossa equipe - <span>@Vieiraaa (Arthur)</span> | <span>@Cruz (Gabriel)</span> | <span>@LipeeeSZ (Felipe Vieira)</span> | <span>@Galdino (Henrique)</span></p>
 			</div>
 			<div class="sy0tkj9wro-i">
-				<p>Developer website - <a target="_blank" href="https://instagram.com/arthurvieiraaa">@Arthur</a> | <a target="_blank" href="https://instagram.com/gabriel_cruzz_">@Gabriel</a> | <a target="_blank" href="https://instagram.com/felipelatki">@Felipe</a> | <a target="_blank" href="https://instagram.com/galdino__0">@Henrique</a> | <a target="_blank" href="https://instagram.com/lukascordt_">@Lukas</a></p>
+				<p>Developer website - <a target="_blank" href="https://instagram.com/arthurvieiraaa">@Arthur</a> | <a target="_blank" href="https://instagram.com/gabriel_cruzz_">@Gabriel</a> | <a target="_blank" href="https://instagram.com/felipelatki">@Felipe</a> | <a target="_blank" href="https://instagram.com/galdino__0">@Henrique</a></p>
 			</div>
 		</div>
 	</footer>
